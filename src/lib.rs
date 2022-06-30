@@ -1,1 +1,1 @@
-pub mod bridge_settings_my_no_sql_entity;
+pub mod price_bridge_settings_my_no_sql_entity;
