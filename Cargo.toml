@@ -1,5 +1,5 @@
 [package]
-name = "my-no-sql-shared"
+name = "my-no-sql-contracts"
 version = "0.1.0"
 edition = "2021"
 
