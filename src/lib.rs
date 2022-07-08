@@ -1,3 +1,4 @@
+pub mod asset_entity;
 pub mod bid_ask_entity;
 pub mod price_bridge_config;
 pub mod price_bridge_instrument_mapping_entity;

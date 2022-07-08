@@ -3,7 +3,7 @@ use rust_extensions::date_time::DateTimeAsMicroseconds;
 use serde::*;
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
-pub struct BidAskMyNoSqlEntity {
+pub struct AssetEntity {
     #[serde(rename = "PartitionKey")]
     pub partition_key: String,
     #[serde(rename = "RowKey")]
@@ -12,8 +12,8 @@ pub struct BidAskMyNoSqlEntity {
     pub time_stamp: String,
 }
 
-impl BidAskMyNoSqlEntity {
-    pub fn generate_partition_key() -> &str {
+impl AssetEntity {
+    pub fn generate_partition_key() -> &'static str {
         "assets"
     }
 
@@ -22,7 +22,7 @@ impl BidAskMyNoSqlEntity {
     }
 }
 
-impl MyNoSqlEntity for BidAskMyNoSqlEntity {
+impl MyNoSqlEntity for AssetEntity {
     fn get_partition_key(&self) -> &str {
         &self.partition_key
     }
