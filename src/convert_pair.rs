@@ -2,7 +2,7 @@ use my_no_sql_server_abstractions::MyNoSqlEntity;
 use rust_extensions::date_time::DateTimeAsMicroseconds;
 use serde::*;
 
-pub const ASSET_PAIR_TABLE_NAME: &str = "convert-paris";
+pub const CONVERT_PAIR_TABLE_NAME: &str = "convert-paris";
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct ConvertPairEntity {
