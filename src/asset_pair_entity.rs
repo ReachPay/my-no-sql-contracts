@@ -16,8 +16,6 @@ pub struct AssetPairEntity {
     pub from_symbol: String,
     #[serde(rename = "ToSymbol")]
     pub to_symbol: String,
-    #[serde(rename = "IsEnabled")]
-    pub is_enabled: bool,
 }
 
 impl AssetPairEntity {
