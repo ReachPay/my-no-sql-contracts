@@ -11,8 +11,11 @@ pub struct BidAskMyNoSqlEntity {
     #[serde(rename = "TimeStamp")]
     pub time_stamp: String,
 
+    #[serde(rename = "Bid")]
     pub bid: f64,
+    #[serde(rename = "Ask")]
     pub ask: f64,
+    #[serde(rename = "DateTime")]
     pub date_time: String,
 }
 
