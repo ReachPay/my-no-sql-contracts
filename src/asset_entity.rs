@@ -2,6 +2,8 @@ use my_no_sql_server_abstractions::MyNoSqlEntity;
 use rust_extensions::date_time::DateTimeAsMicroseconds;
 use serde::*;
 
+pub const ASSETS_TABLE_NAME: &str = "assets";
+
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct AssetEntity {
     #[serde(rename = "PartitionKey")]
