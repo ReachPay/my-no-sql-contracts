@@ -34,6 +34,10 @@ impl BidAskMyNoSqlEntity {
             date_time,
         }
     }
+
+    pub fn get_date_time(&self) -> DateTimeAsMicroseconds {
+        DateTimeAsMicroseconds::parse_iso_string(self.date_time.as_str()).unwrap()
+    }
 }
 
 impl MyNoSqlEntity for BidAskMyNoSqlEntity {
