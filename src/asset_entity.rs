@@ -20,6 +20,8 @@ pub struct AssetEntity {
     pub name: String,
     #[serde(rename = "Id")]
     pub id: String,
+    #[serde(rename = "IconUrl")]
+    pub icon_url: String,
 }
 
 impl AssetEntity {
