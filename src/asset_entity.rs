@@ -16,6 +16,10 @@ pub struct AssetEntity {
     pub accuracy: usize,
     #[serde(rename = "IsEnabled")]
     pub is_enabled: bool,
+    #[serde(rename = "Name")]
+    pub name: String,
+    #[serde(rename = "Id")]
+    pub id: String,
 }
 
 impl AssetEntity {
