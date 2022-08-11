@@ -3,6 +3,7 @@ use rust_extensions::date_time::DateTimeAsMicroseconds;
 use serde::*;
 
 pub const BID_ASK_SNAPSHOT_TABLE_NAME: &str = "bid-ask-snapshot";
+pub const PARTITION_KEY: &str = "bidask";
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct BidAskMyNoSqlEntity {
