@@ -2,6 +2,8 @@ use my_no_sql_server_abstractions::MyNoSqlEntity;
 use rust_extensions::date_time::DateTimeAsMicroseconds;
 use serde::*;
 
+pub const BID_ASK_SNAPSHOT_TABLE_NAME: &str = "bid-ask-snapshot";
+
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct BidAskMyNoSqlEntity {
     #[serde(rename = "PartitionKey")]
