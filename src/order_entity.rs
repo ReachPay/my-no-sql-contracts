@@ -2,7 +2,8 @@ use my_no_sql_server_abstractions::MyNoSqlEntity;
 use rust_extensions::date_time::DateTimeAsMicroseconds;
 use serde::*;
 
-pub const ASSETS_TABLE_NAME: &str = "assets";
+pub const ORDERS_TO_PAY_TABLE_NAME: &str = "orders-to-pay";
+pub const ORDERS_TO_BE_PAIED_TABLE_NAME: &str = "orders-to-be_paied";
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct OrderMyNoSqlEntity {
