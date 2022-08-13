@@ -20,7 +20,7 @@ pub struct OrderMyNoSqlEntity {
     pub currency: String,
 
     #[serde(rename = "Amount")]
-    pub amount: usize,
+    pub amount: f64,
 
     #[serde(rename = "Registered")]
     pub registered: i64,
