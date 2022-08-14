@@ -3,7 +3,7 @@ use rust_extensions::date_time::DateTimeAsMicroseconds;
 use serde::*;
 
 pub const ORDERS_TO_PAY_TABLE_NAME: &str = "orders-to-pay";
-pub const ORDERS_TO_BE_PAIED_TABLE_NAME: &str = "orders-to-be_paied";
+pub const ORDERS_TO_BE_PAIED_TABLE_NAME: &str = "orders-to-be-paied";
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct OrderMyNoSqlEntity {
