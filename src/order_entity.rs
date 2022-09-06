@@ -33,6 +33,9 @@ pub struct OrderMyNoSqlEntity {
 
     #[serde(rename = "PaymentAddress")]
     pub payment_address: Option<String>,
+
+    #[serde(rename = "Memo")]
+    pub memo: Option<String>,
 }
 
 impl OrderMyNoSqlEntity {
