@@ -4,6 +4,10 @@ version = "0.1.1"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[features]
+default = []
+crypto-deposit-settings-entity = []
+price-bridge-settings-entity = []
 
 [dependencies]
 my-no-sql-server-abstractions = { tag = "0.1.0", git = "https://github.com/MyJetTools/my-no-sql-server-abstractions.git" }
