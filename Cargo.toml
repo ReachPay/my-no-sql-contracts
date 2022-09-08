@@ -8,6 +8,13 @@ edition = "2021"
 default = []
 crypto-deposit-settings-entity = []
 price-bridge-settings-entity = []
+order-entity = []
+convert-pair = []
+bid-ask-entity = []
+asset-pair-entity = []
+asset-entity = []
+price-bridge-config = []
+price-bridge-instrument-mapping-entity = []
 
 [dependencies]
 my-no-sql-server-abstractions = { tag = "0.1.0", git = "https://github.com/MyJetTools/my-no-sql-server-abstractions.git" }
