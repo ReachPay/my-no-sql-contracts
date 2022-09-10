@@ -31,9 +31,6 @@ pub struct OrderMyNoSqlEntity {
     #[serde(rename = "Comission")]
     pub comission: f64,
 
-    #[serde(rename = "PaymentAddress")]
-    pub payment_address: Option<String>,
-
     #[serde(rename = "Memo")]
     pub memo: Option<String>,
 }
