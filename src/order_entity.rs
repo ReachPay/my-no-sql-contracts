@@ -33,6 +33,9 @@ pub struct OrderMyNoSqlEntity {
 
     #[serde(rename = "Memo")]
     pub memo: Option<String>,
+
+    #[serde(rename = "IsCommissionOnTop")]
+    pub is_commission_on_top: Option<bool>,
 }
 
 impl OrderMyNoSqlEntity {
