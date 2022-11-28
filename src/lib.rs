@@ -16,3 +16,5 @@ pub mod price_bridge_config;
 pub mod price_bridge_instrument_mapping_entity;
 #[cfg(feature = "price-bridge-settings-entity")]
 pub mod price_bridge_settings_entity;
+#[cfg(feature = "confirm_2fa_codes")]
+pub mod confirm_2fa_codes;
