@@ -2,7 +2,7 @@ use my_no_sql_server_abstractions::MyNoSqlEntity;
 use rust_extensions::date_time::DateTimeAsMicroseconds;
 use serde::*;
 
-pub const ASSETS_TABLE_NAME: &str = "assets";
+pub const MERCHANTS_CALLBACK_OVERRIDES_TABLE_NAME: &str = "merchant_callback_settings_override";
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct MerchantCallbackSettingsOverride {
