@@ -18,5 +18,6 @@ price-bridge-instrument-mapping-entity = []
 
 [dependencies]
 my-no-sql-server-abstractions = { tag = "0.1.0", git = "https://github.com/MyJetTools/my-no-sql-server-abstractions.git" }
+my-no-sql-macros = { tag = "0.1.0", git = "https://github.com/MyJetTools/my-no-sql-macros.git" }
 rust-extensions = { tag = "0.1.2", git = "https://github.com/MyJetTools/rust-extensions.git" }
 serde = { version = "*", features = ["derive"] }
