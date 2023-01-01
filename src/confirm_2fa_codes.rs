@@ -7,11 +7,11 @@ use serde::*;
 pub const ASSETS_TABLE_NAME: &str = "assets";
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
-pub enum Confirm2faCodeType{
+pub enum Confirm2faCodeType {
     Login,
     Withdrawal,
     Exchange,
-    SettingsUpdate
+    SettingsUpdate,
 }
 
 impl fmt::Display for Confirm2faCodeType {
@@ -35,30 +35,13 @@ pub struct Confirm2faCodeEntity {
 }
 
 impl Confirm2faCodeEntity {
-    pub fn get_code_type(&self) -> Confirm2faCodeType{
-        match self.code_type.as_str(){
+    pub fn get_code_type(&self) -> Confirm2faCodeType {
+        match self.code_type.as_str() {
             "Login" => Confirm2faCodeType::Login,
             "Withdrawal" => Confirm2faCodeType::Withdrawal,
             "Exchange" => Confirm2faCodeType::Exchange,
             "SettingsUpdate" => Confirm2faCodeType::SettingsUpdate,
-            _ => panic!("Unknown code type {}", self.code_type)
+            _ => panic!("Unknown code type {}", self.code_type),
         }
-    }
-}
-
-
-impl MyNoSqlEntity for Confirm2faCodeEntity {
-    fn get_partition_key(&self) -> &str {
-        &self.code_type
-    }
-
-    fn get_row_key(&self) -> &str {
-        &self.process_id
-    }
-
-    fn get_time_stamp(&self) -> i64 {
-        DateTimeAsMicroseconds::parse_iso_string(self.time_stamp.as_str())
-            .unwrap()
-            .unix_microseconds
     }
 }
