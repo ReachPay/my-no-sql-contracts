@@ -1,8 +1,6 @@
-use rust_extensions::date_time::DateTimeAsMicroseconds;
 use serde::*;
 
-pub const ASSET_PAIR_TABLE_NAME: &str = "asset-pairs";
-#[my_no_sql_macros::my_no_sql_entity]
+#[my_no_sql_macros::my_no_sql_entity("asset-pairs")]
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct AssetPairEntity {
     #[serde(rename = "FromSymbol")]

@@ -1,9 +1,7 @@
 use rust_extensions::date_time::DateTimeAsMicroseconds;
 use serde::*;
 
-pub const BID_ASK_SNAPSHOT_TABLE_NAME: &str = "bid-ask-snapshot";
-pub const PARTITION_KEY: &str = "bidask";
-#[my_no_sql_macros::my_no_sql_entity]
+#[my_no_sql_macros::my_no_sql_entity("bid-ask-snapshot")]
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct BidAskMyNoSqlEntity {
     #[serde(rename = "Bid")]
@@ -18,13 +16,17 @@ impl BidAskMyNoSqlEntity {
     pub fn new(id: String, bid: f64, ask: f64, date_time: DateTimeAsMicroseconds) -> Self {
         let date_time = date_time.to_rfc3339();
         BidAskMyNoSqlEntity {
-            partition_key: "bidask".to_string(),
+            partition_key: Self::get_partition_key().to_string(),
             row_key: id,
             time_stamp: date_time.clone(),
             bid,
             ask,
             date_time,
         }
+    }
+
+    pub fn get_partition_key() -> &'static str {
+        "bidask"
     }
 
     pub fn get_date_time(&self) -> DateTimeAsMicroseconds {
