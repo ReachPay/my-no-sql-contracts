@@ -8,6 +8,15 @@ pub struct MerchantCallbackSettingsOverride {
 }
 
 impl MerchantCallbackSettingsOverride {
+    pub fn new(client_id: String, currency: &str, network: &str, callback_type: i32) -> Self {
+        Self {
+            partition_key: client_id,
+            row_key: format!("{}@{}", currency, network),
+            callback_type,
+            time_stamp: "".to_string(),
+        }
+    }
+
     pub fn generate_merchant_id(&self) -> &str {
         &self.partition_key
     }
