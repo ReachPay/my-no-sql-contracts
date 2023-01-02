@@ -17,4 +17,12 @@ impl PaymentSettingsNoSql {
             time_stamp: "".to_string(),
         }
     }
+
+    pub fn get_asset_id(&self) -> &str {
+        &self.partition_key
+    }
+
+    pub fn get_network(&self) -> &str {
+        &self.row_key
+    }
 }
