@@ -4,10 +4,14 @@ pub mod asset_entity;
 pub mod asset_pair_entity;
 #[cfg(feature = "bid-ask-entity")]
 pub mod bid_ask_entity;
+#[cfg(feature = "confirm_2fa_codes")]
+pub mod confirm_2fa_codes;
 #[cfg(feature = "convert-pair")]
 pub mod convert_pair;
 #[cfg(feature = "crypto-deposit-settings-entity")]
 pub mod crypto_deposit_settings_entity;
+#[cfg(feature = "merchant_callback_settings_override")]
+pub mod merchant_callback_settings_override;
 #[cfg(feature = "order-entity")]
 pub mod order_entity;
 #[cfg(feature = "price-bridge-config")]
@@ -16,7 +20,6 @@ pub mod price_bridge_config;
 pub mod price_bridge_instrument_mapping_entity;
 #[cfg(feature = "price-bridge-settings-entity")]
 pub mod price_bridge_settings_entity;
-#[cfg(feature = "confirm_2fa_codes")]
-pub mod confirm_2fa_codes;
-#[cfg(feature = "merchant_callback_settings_override")]
-pub mod merchant_callback_settings_override;
+
+#[cfg(feature = "payment_settings")]
+pub mod payment_settings;

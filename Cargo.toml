@@ -17,6 +17,7 @@ price-bridge-config = []
 price-bridge-instrument-mapping-entity = []
 confirm_2fa_codes = []
 merchant_callback_settings_override = []
+payment_settings = []
 
 [dependencies]
 my-no-sql-server-abstractions = { tag = "0.1.1", git = "https://github.com/MyJetTools/my-no-sql-server-abstractions.git" }
