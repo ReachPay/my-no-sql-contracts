@@ -7,6 +7,12 @@ use serde::{Deserialize, Serialize};
 pub struct CryptoDepositSettingsEntity {
     #[serde(rename = "FireblockId")]
     pub fireblocks_id: String,
+    #[serde(rename = "BaseFireblocksAsset")]
+    pub base_fireblocks_id: String,
+    #[serde(rename = "RebalanceTrashhold")]
+    pub rebalance_trashold: f64,
+    #[serde(rename = "RebalanceGasFeeAmount")]
+    pub rebalance_gas_fee_amount: String,
 }
 
 impl CryptoDepositSettingsEntity {
