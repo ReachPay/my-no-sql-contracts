@@ -12,7 +12,7 @@ pub struct CryptoDepositSettingsEntity {
     #[serde(rename = "RebalanceTrashhold")]
     pub rebalance_trashold: f64,
     #[serde(rename = "RebalanceGasFeeAmount")]
-    pub rebalance_gas_fee_amount: String,
+    pub rebalance_gas_fee_amount: f64,
 }
 
 impl CryptoDepositSettingsEntity {
