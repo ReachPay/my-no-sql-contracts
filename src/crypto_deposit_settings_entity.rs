@@ -8,7 +8,7 @@ pub struct CryptoDepositSettingsEntity {
     #[serde(rename = "FireblockId")]
     pub fireblocks_id: String,
     #[serde(rename = "BaseFireblocksAsset")]
-    pub base_fireblocks_id: String,
+    pub base_fireblocks_id: Option<String>,
     #[serde(rename = "RebalanceTrashhold")]
     pub rebalance_trashold: f64,
     #[serde(rename = "RebalanceGasFeeAmount")]
