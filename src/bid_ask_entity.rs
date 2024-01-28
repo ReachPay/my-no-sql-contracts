@@ -1,7 +1,8 @@
+service_sdk::macros::use_my_no_sql_entity!();
 use rust_extensions::date_time::DateTimeAsMicroseconds;
 use serde::*;
 
-#[my_no_sql_macros::my_no_sql_entity("bid-ask-snapshot")]
+#[my_no_sql_entity("bid-ask-snapshot")]
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct BidAskMyNoSqlEntity {
     #[serde(rename = "Bid")]

@@ -1,6 +1,7 @@
 use serde::*;
+service_sdk::macros::use_my_no_sql_entity!();
 
-#[my_no_sql_macros::my_no_sql_entity("merchant-callback-settings-override")]
+#[my_no_sql_entity("merchant-callback-settings-override")]
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct MerchantCallbackSettingsOverride {
     #[serde(rename = "CallbackType")]

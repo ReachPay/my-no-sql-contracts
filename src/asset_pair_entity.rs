@@ -1,6 +1,7 @@
+service_sdk::macros::use_my_no_sql_entity!();
 use serde::*;
 
-#[my_no_sql_macros::my_no_sql_entity("asset-pairs")]
+#[my_no_sql_entity("asset-pairs")]
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct AssetPairEntity {
     #[serde(rename = "FromSymbol")]

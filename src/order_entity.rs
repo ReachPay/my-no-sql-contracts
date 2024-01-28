@@ -1,6 +1,7 @@
 use serde::*;
+service_sdk::macros::use_my_no_sql_entity!();
 
-#[my_no_sql_macros::my_no_sql_entity("orders-to-pay")]
+#[my_no_sql_entity("orders-to-pay")]
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct OrderToPayMyNoSqlEntity {
     #[serde(rename = "Currency")]
@@ -15,8 +16,8 @@ pub struct OrderToPayMyNoSqlEntity {
     #[serde(rename = "Expires")]
     pub expires: i64,
 
-    #[serde(rename = "Comission")]
-    pub comission: f64,
+    #[serde(rename = "Commission")]
+    pub commission: f64,
 
     #[serde(rename = "Memo")]
     pub memo: Option<String>,
@@ -43,7 +44,7 @@ impl OrderToPayMyNoSqlEntity {
     }
 }
 
-#[my_no_sql_macros::my_no_sql_entity("orders-to-be-payed")]
+#[my_no_sql_entity("orders-to-be-payed")]
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct OrderToBePaidMyNoSqlEntity {
     #[serde(rename = "Currency")]
@@ -58,8 +59,8 @@ pub struct OrderToBePaidMyNoSqlEntity {
     #[serde(rename = "Expires")]
     pub expires: i64,
 
-    #[serde(rename = "Comission")]
-    pub comission: f64,
+    #[serde(rename = "Commission")]
+    pub commission: f64,
 
     #[serde(rename = "Memo")]
     pub memo: Option<String>,

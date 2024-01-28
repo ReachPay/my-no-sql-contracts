@@ -1,6 +1,7 @@
+service_sdk::macros::use_my_no_sql_entity!();
 use serde::{Deserialize, Serialize};
 
-#[my_no_sql_macros::my_no_sql_entity("crypto-deposit-settings")]
+#[my_no_sql_entity("crypto-deposit-settings")]
 #[derive(Debug, Serialize, Deserialize, Clone)]
 #[serde(rename_all = "camelCase")]
 

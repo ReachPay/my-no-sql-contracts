@@ -1,6 +1,7 @@
+service_sdk::macros::use_my_no_sql_entity!();
 use serde::*;
 
-#[my_no_sql_macros::my_no_sql_entity("assets")]
+#[my_no_sql_entity("assets")]
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct AssetEntity {
     #[serde(rename = "Accuracy")]

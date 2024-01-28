@@ -1,6 +1,7 @@
 use serde::*;
+service_sdk::macros::use_my_no_sql_entity!();
 
-#[my_no_sql_macros::my_no_sql_entity("convert-paris")]
+#[my_no_sql_entity("convert-paris")]
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct ConvertPairEntity {
     #[serde(rename = "FromSymbol")]
