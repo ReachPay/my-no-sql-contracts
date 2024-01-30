@@ -23,7 +23,7 @@ pub struct OrderToPayMyNoSqlEntity {
     pub memo: Option<String>,
 
     #[serde(rename = "IsCommissionOnTop")]
-    pub is_commission_on_top: Option<bool>,
+    pub is_commission_on_top: bool,
 }
 
 impl OrderToPayMyNoSqlEntity {
