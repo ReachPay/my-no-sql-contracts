@@ -5,7 +5,7 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [features]
-default = []
+default = ["asset-pair-entity"]
 crypto-deposit-settings-entity = []
 price-bridge-settings-entity = []
 order-entity = []
@@ -20,7 +20,7 @@ merchant_callback_settings_override = []
 payment_settings = []
 
 [dependencies]
-service-sdk = { tag = "0.2.5", git = "https://github.com/MyJetTools/service-sdk.git", features = [
+service-sdk = { tag = "0.2.6", git = "https://github.com/MyJetTools/service-sdk.git", features = [
     "macros",
     "my-nosql-sdk",
 ] }
